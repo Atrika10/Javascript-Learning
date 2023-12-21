@@ -11,11 +11,7 @@ function isAnagram(str1, str2) {
   }
 
   // step -2
-  let arr = new Array(26); // create an array 
-  // initialize with 0
-  for (let i = 0; i < arr.length; i++) {
-    arr[i] = 0;
-  }
+  let arr = new Array(26).fill(0); // create an array 
 
   // traverse string1 & increase the count of letter
   let string = "a";
