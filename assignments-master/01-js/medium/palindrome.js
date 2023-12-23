@@ -4,6 +4,7 @@
 */
 
 function isPalindrome(str) {
+  str = str.toLowerCase();  // change entire string in Lowercase or uppercase to compare each letter (according to the question)
   let n = str.length;
   let i =0; let j=0;
   while (i<n/2) {
@@ -16,5 +17,5 @@ function isPalindrome(str) {
   }
   return true;
 }
-console.log(isPalindrome("nan"));
+console.log(isPalindrome("Nan"));
 module.exports = isPalindrome;
