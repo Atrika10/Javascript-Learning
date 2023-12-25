@@ -35,3 +35,11 @@ Logical NOT !
 ### 5. Ternary operators in JS
 condition ? true output : false output
 
+
+
+# Conditional Statements
+
+### If statement
+### If else statement
+### If else statement
+### else-if statement
