@@ -24,9 +24,13 @@ str[0], str[1], str[2].......
 
 ### String method in JS
 str.toUpperCase( )
+
 str.toLowerCase( )
+
 str.trim( ) // trim() function removes whitespace from both sides of a string
 
 str1.concat( str2 ) // joins string2 (str2) with String1 (str1)
+
 str.replace( searchValue, newValue )
+
 str.charAt( idx )     // It will return the letter of that index
