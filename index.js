@@ -10,3 +10,17 @@ btn.style.color = "white";
 // populate in body 
 let bodyEl = document.querySelector("body");
 bodyEl.prepend(btn);    // prepend method help me to insert this element as the first element inside the body tag
+
+
+// Create a <p> tag in html, give it a class & some styling.
+// Now create a new class in CSS and try to append this class to the <p> element.
+// Solve this problem using classList.
+
+let p = document.querySelector("p");
+
+// p.setAttribute("class", "newClass"); 
+// if we use setAttribute, it will override our old class
+
+// we will use classList
+p.classList.add("newClass");
+// we use add method of classList to add new class without override old class or classes
