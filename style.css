@@ -6,3 +6,12 @@
 .newClass{
     font-size: 50px;
 }
+
+.nightMode{
+    background-color: rgb(36, 35, 35);
+    color: white;
+}
+.lightMode{
+    background-color: aliceblue;
+    color: black;
+}
