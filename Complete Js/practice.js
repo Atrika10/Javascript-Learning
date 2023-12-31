@@ -13,8 +13,11 @@ class user {
         console.log("viewdata")
     }
 }
-
+// admin class is a child class of user class
 class admin extends user{
+    constructor(name, mail){
+        super(name, mail);      // as this is a child class, we have to call constructor of parent class
+    }
     editData(){
         data = "data edited";
         console.log(`this is new data => ${data}`);
@@ -28,7 +31,7 @@ console.log(stu.email);
 console.log(stu.viewData());
 
 // create object of admin class
-let admin1 = new admin();
+let admin1 = new admin("admin", "admin@gmail.com");
 
 console.log(admin1);    // name & email will be undefined as we have not passed 
 console.log(admin1.editData());
