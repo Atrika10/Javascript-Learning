@@ -141,10 +141,11 @@ arr.forEach((val) =>{
 * here we can observe that we passed an *arrow function* as a parameter to another function called *forEach*
 
 # Map method
+### Defination
 Creates a new array with the results of some operation. The value its callback returns are
 used to form new array
 
-* map is used to create a new array using some returned value based on each value which is stored at the individual indices of the array
+* map is use to create a new array using some returned value based on each value which is stored at the individual indices of the array
 
 * Note :
 map is very similar of forEach method; difference is that *map* method return an array after performing operation and *forEach* method doesn't return any array it's just do the mentioned operation.
@@ -153,7 +154,7 @@ map is very similar of forEach method; difference is that *map* method return an
 ```
 arr.map(callBackFunction(val, idx, array));
 ```
-Example : 
+#### Example : 
 ```
 let num = [2,4,6];
 const newArray = num.map((val)=>{
@@ -167,9 +168,14 @@ console.log(num);       // [ 2, 4, 6 ]
 
 # filter method
 
+### Defination
 Work of this method is to traverse all the indices of an array & filter out some value (based on some conditions) and return new array.
 
-Example : Give me those values which are even
+### Syntax of filter method
+```
+array.filter(callBackFunction(val));
+```
+#### Example : Give me those values which are even
 ```
 let num = [2,3,4,5];
 const newArray = num.filter((val) =>{
@@ -181,7 +187,7 @@ console.log(num);       // [2,3,4,5]
 // it return only those values which fullfill the given conditions in a new Array
 ```
 
-Example2 : Give me all value which are greater than 5
+#### Example2 : Give me all value which are greater than 5
 
 ```
 let num = [4,5,2,8,7];
@@ -191,3 +197,30 @@ const newArray = num.filter((val)=>{
 console.log(newArray);  // [ 8, 7 ]
 console.log(num);       // [ 4, 5, 2, 8, 7 ]
 ```
+
+# reduce Method
+### Defination
+Performs some operations & reduces the array to a *single value*. It returns that single value.
+
+### when will you use *reduce* method
+You can take multiple value as an input but you have to return only one single value. Then you can use *reduce method*.
+
+### Syntax of reduce method
+```
+array.reduce(callBackFunction(result, value));
+
+```
+ callBack function of *reduce* method take 2 parameter 
+* 1st param is the result param which will be return at the end as final result
+* 2nd param is the value or you can say current value 
+
+#### Example : Return sum of all elements in an array
+```
+let num = [10,20,30,40];
+const sum = num.reduce((res, val)=>{
+    return res+val;
+})
+console.log(sum);   // 100
+```
+* *res* will be initialize with 1st element of array (here it is 10);
+* *val* will be initialize with 2nd element of array (here it is 20);
