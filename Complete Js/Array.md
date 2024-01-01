@@ -50,3 +50,24 @@ Example2 : let arr = [1,2,3,4,5];
                      let arr2 = [10,20];
                      let arr3 = [100,200];
                      console.log(arr.concat(arr2, arr3));
+#### slice (startIndex, endIndex)
+Return a piece of the array (it will not change the original array)
+
+Example : let arr = ["mango", "Orange", "papaya", "banana","mud apples"]
+
+console.log(arr.slice(2,4));  //  [ 'papaya', 'banana' ]
+
+// first index is inclusive but ending index is non inclusive
+
+#### splice (startIndex, delCount, newEl1,....)
+Change Original Array
+* add
+* remove
+* replce
+We can perform this operation using Splice method.
+
+*splice() take 3 param*
+* 1st param => starting index (from where should I start)
+* 2nd param => delete element (how many element we want to delete)
+* 3rd param => if we want to add new element we can write those using comma (,) 
+else we can leave this param empty if we don't want to add new element
