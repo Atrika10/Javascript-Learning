@@ -1,8 +1,8 @@
 ## Create Array in JS
 let arr = ["Smile", "Joy", "happiness", "Faith", "Love"];
-or
+
 let numbers = [1,2,3,4,5];
-or
+
 let arr = ["Hello", 2 , "people"];
 
 ### Array Indices
