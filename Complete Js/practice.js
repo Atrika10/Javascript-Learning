@@ -35,3 +35,30 @@ let admin1 = new admin("admin", "admin@gmail.com");
 
 console.log(admin1);    // name & email will be undefined as we have not passed 
 console.log(admin1.editData());
+
+// Q1> We are given array of marks of students. Filter our of the marks of students that scored 90+
+let marks = [89,59,92,95,99];
+const filteredArray = marks.filter((val) =>{
+    return val>90;
+});
+
+console.log(filteredArray);
+
+// Q2>
+// Take a number n as input from user. Create an array of numbers from 1 to n.
+// Use the reduce method to calculate sum of all numbers in the array.
+// Use the reduce method to calculate product of all numbers in the array
+let n =10;
+let arr = [];
+//step - 1 creating array 1 to n
+for(let i=1; i<=n;i++){
+    arr.push(i);
+}
+// step -2 
+const sum = arr.reduce((res,val)=>{
+    return res+val;
+})
+const prod = arr.reduce((res,val)=>{
+    return res*val;
+})
+console.log("sum =>" + sum + " & product =>" + prod);
