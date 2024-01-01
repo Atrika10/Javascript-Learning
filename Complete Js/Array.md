@@ -139,3 +139,28 @@ arr.forEach((val) =>{
 })
 ```
 * here we can observe that we passed an *arrow function* as a parameter to another function called *forEach*
+
+# Map function
+Creates a new array with the results of some operation. The value its callback returns are
+used to form new array
+
+* map is used to create a new array using some returned value based on each value which is stored at the individual indices of the array
+
+* Note :
+map is very similar of forEach method; difference is that *map* method return an array after performing operation and *forEach* method doesn't return any array it's just do the mentioned operation.
+
+### Syntax of map method
+```
+arr.map(callBackFunction(val, idx, array));
+```
+Example : 
+```
+let num = [2,4,6];
+const newArray = num.map((val)=>{
+    return val*val;
+});
+console.log(newArray);  // [ 4, 16, 36 ]
+console.log(num);       // [ 2, 4, 6 ]
+
+// Note original array remain same
+```
