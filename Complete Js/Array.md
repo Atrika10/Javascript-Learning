@@ -140,7 +140,7 @@ arr.forEach((val) =>{
 ```
 * here we can observe that we passed an *arrow function* as a parameter to another function called *forEach*
 
-# Map function
+# Map method
 Creates a new array with the results of some operation. The value its callback returns are
 used to form new array
 
@@ -163,4 +163,31 @@ console.log(newArray);  // [ 4, 16, 36 ]
 console.log(num);       // [ 2, 4, 6 ]
 
 // Note original array remain same
+```
+
+# filter method
+
+Work of this method is to traverse all the indices of an array & filter out some value (based on some conditions) and return new array.
+
+Example : Give me those values which are even
+```
+let num = [2,3,4,5];
+const newArray = num.filter((val) =>{
+    return val%2 ==0;
+})
+console.log(newArray);  // [2,4]
+console.log(num);       // [2,3,4,5]
+
+// it return only those values which fullfill the given conditions in a new Array
+```
+
+Example2 : Give me all value which are greater than 5
+
+```
+let num = [4,5,2,8,7];
+const newArray = num.filter((val)=>{
+    return val>5;
+})
+console.log(newArray);  // [ 8, 7 ]
+console.log(num);       // [ 4, 5, 2, 8, 7 ]
 ```
