@@ -47,7 +47,7 @@ console.log(filteredArray);
 // Q2>
 // Take a number n as input from user. Create an array of numbers from 1 to n.
 // Use the reduce method to calculate sum of all numbers in the array.
-// Use the reduce method to calculate product of all numbers in the array
+// Use the reduce method to calculate factorial of all numbers in the array
 let n =10;
 let arr = [];
 //step - 1 creating array 1 to n
@@ -58,7 +58,7 @@ for(let i=1; i<=n;i++){
 const sum = arr.reduce((res,val)=>{
     return res+val;
 })
-const prod = arr.reduce((res,val)=>{
+const fact = arr.reduce((res,val)=>{
     return res*val;
 })
-console.log("sum =>" + sum + " & product =>" + prod);
+console.log("sum =>" + sum + " & factorial =>" + fact);
