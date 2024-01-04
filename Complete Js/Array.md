@@ -468,3 +468,34 @@ let [var1, var2, var3, ...var4] = student;
 ```
 * NOTE :
 Here *var4* is itself an array which is holding rest of the element of *student* array.
+
+
+# <p style = "color :pink ">Object DeStructuring </p>
+
+#### Example :
+```
+let student = {
+  name : "Atrika",
+  age : "22",
+  mail : "abc@mail.com",
+  passward : "1234"
+}
+// destructing object
+
+let {mail, passward} = student; // it will search the value of 'mail' & 'passward', we have to give same name else we will get 'undefined'.
+
+// if we want to store in another variable
+
+let {mail : mailInfo, passward : secret} = student;
+console.log(mailInfo);    // here if we want to get the value of mail it will give 'undefined' as we store the value in new variable called 'mailInfo'.
+
+// we can pass value with default param, if that key not exist it will give us to default value if exist it will replace with actual value
+let {city = "kolkata", name} = student;
+console.log(city)   // kolkata
+
+// update 
+
+const updateStudentData = {...student, city : "Howrah"};  // use spread syntax
+console.log(updateStudentData.city)   // howrah
+
+```
