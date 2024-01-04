@@ -395,3 +395,46 @@ console.log(strObject);
 }
 ```
 * NOTE : Here in *strObject* indices of *str* is stored as *key* & value of each indices of *str* is stored as *pair*. 
+
+# REST
+* <i style = "color : #ffbb69">Rest is opposite of *spread*. </i>
+* In *spread* there is only one value (which can be *array/string*) & using *spread* we can get multiple value (value of each index).
+* In *rest* multiple values will come & we store all of those value in a single `Array`.
+
+### <p style = "color :pink "> Definition : </p>
+
+* <i>Rest allows a function to take an indifinite number of arguments & bundle them in an array. </i>
+
+#### Syntax :
+```
+function sum(...args){
+  let sum =0;
+  for(let e of args){
+    sum += e;
+  }
+  return sum;
+}
+console.log(sum(2,3));
+console.log(sum(2,30,8,));
+console.log(sum(12,33,7,9,5,3));
+```
+* NOTE :
+All the element we're passing it store in *arguments* then using *rest* we convert it to array & use it.
+
+### What is the need of use *rest*
+* When we need to apply some array method on given elements we can use *rest* beacuse we can't apply array method on *arguments* 
+#### Example : 
+* can't use like follwing example <p style = "color:  red; font-size : 20px"> X </p>
+```
+function sum() {
+   return arguments.reduce((sum, ele)=> sum+ele) ;
+}
+min(1,2);
+```
+* right way  <p style = "color:  green; font-size : 20px "> √ </p>
+```
+function sum(...args) {
+   return args.reduce((sum, ele)=> sum+ele) ;
+}
+min(1,2); //3
+```
