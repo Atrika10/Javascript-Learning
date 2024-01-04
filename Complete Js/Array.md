@@ -276,7 +276,7 @@ console.log(sum);   // 100
 - _res_ will be initialize with 1st element of array (here it is 10);
 - _val_ will be initialize with 2nd element of array (here it is 20);
 
-# Spread
+# <p style = "color :pink "> Spread </p>
 
 - Expand an iterable into multiple values
 
@@ -396,12 +396,12 @@ console.log(strObject);
 ```
 * NOTE : Here in *strObject* indices of *str* is stored as *key* & value of each indices of *str* is stored as *pair*. 
 
-# REST
+# <p style = "color :pink ">  REST  </p>
 * <i style = "color : #ffbb69">Rest is opposite of *spread*. </i>
 * In *spread* there is only one value (which can be *array/string*) & using *spread* we can get multiple value (value of each index).
 * In *rest* multiple values will come & we store all of those value in a single `Array`.
 
-### <p style = "color :pink "> Definition : </p>
+###  Definition :
 
 * <i>Rest allows a function to take an indifinite number of arguments & bundle them in an array. </i>
 
@@ -438,3 +438,33 @@ function sum(...args) {
 }
 min(1,2); //3
 ```
+#
+# <p style = "color :pink "> DeStructuring </p>
+* Storing values of array into multiple variables.
+
+Example :
+```
+let student = ["Dipika", "Rakhi", "Soumi","Laxmi"];
+
+// way 1  to store each element of array in a new variables
+let var1 = student[0];
+let var2 = student[1];
+let var3 = student[2];
+
+// way 2 using destructuring
+let [var1, var2, var3] = student;
+
+// var1 is holding student[0],
+// var2 is holding student[0] & so on
+```
+
+#### we can combine destructuring with *rest*
+Example :
+```
+let student = ["Dipika", "Rakhi", "Soumi","Laxmi","Puja","Rai"];
+
+let [var1, var2, var3, ...var4] = student;
+
+```
+* NOTE :
+Here *var4* is itself an array which is holding rest of the element of *student* array.
