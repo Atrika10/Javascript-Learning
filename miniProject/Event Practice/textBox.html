@@ -13,14 +13,27 @@
 
 
     <script>
-        // we will do in 2 step
-        // step - 1 : select input & para
-        // step - 2 : tracking each value by using 'input' eventListener & show it to innerText of para 
-        let inp = document.querySelector("#inputBox");
-        let para = document.querySelector("#para");
+        // // we will do in 2 step
+        // // step - 1 : select input & para
+        // // step - 2 : tracking each value by using 'input' eventListener & show it to innerText of para 
+        // let inp = document.querySelector("#inputBox");
+        // let para = document.querySelector("#para");
 
-        inp.addEventListener("input",()=>{
-            para.innerText = inp.value;
+        // inp.addEventListener("input",()=>{
+        //     para.innerText = inp.value;
+        // })
+
+        // Q1> Create a button on the page using JavaScript. Add an event listener to the button that changes the button’s color to green when it is clicked
+        let btn = document.createElement("button");
+        btn.innerText = "click me";
+        let inpBox = document.getElementById("inputBox");
+
+        inpBox.after(btn);
+        btn.addEventListener("click", ()=>{
+            // change button color
+            btn.style.backgroundColor = "green";
+            btn.style.color = "white";
+
         })
 
     </script>
