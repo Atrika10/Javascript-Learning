@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- // Task => taking input from user & showing it in a paragraph (*Track each change*) -->
+<body>
+    <h2>Text Box</h2>   
+    <input type="text" id="inputBox"> <!-- input box to take input from user-->
+    <p id="para"> </p>    <!-- empty para where text will be displayed-->
+
+
+    <script>
+        // we will do in 2 step
+        // step - 1 : select input & para
+        // step - 2 : tracking each value by using 'input' eventListener & show it to innerText of para 
+        let inp = document.querySelector("#inputBox");
+        let para = document.querySelector("#para");
+
+        inp.addEventListener("input",()=>{
+            para.innerText = inp.value;
+        })
+
+    </script>
+</body>
+</html>
