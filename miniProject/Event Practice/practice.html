@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice event in JS</title>
+</head>
+<body>
+
+    <script>
+        // create an input element on the page
+        let inp = document.createElement("input");
+        let body = document.getElementsByTagName("body")[0];
+        body.append(inp);
+        inp.placeholder = "enter your name";
+
+        let h2 = document.createElement("h2"); // add an h2 heading
+        inp.after(h2);
+        inp.addEventListener("input", ()=>{
+            h2.innerText = inp.value;
+        });
+        
+
+    </script>
+</body>
+</html>
