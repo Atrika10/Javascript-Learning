@@ -8,6 +8,8 @@
 <body>
 
     <script>
+        // Create an input element on the page with a placeholder ”enter your name”and an H2 heading on the page inside HTML.The purpose of this input element is to enter  a user’s name so it should only input letters from a-z,A-Z and space (all other characters should not be detected).Whenever the user inputs their name,their input should be dynamically visible inside theheading.[Please note that no other character apart from the allowed characters should be visible in the heading
+
         // create an input element on the page
         let inp = document.createElement("input");
         let body = document.getElementsByTagName("body")[0];
@@ -16,8 +18,17 @@
 
         let h2 = document.createElement("h2"); // add an h2 heading
         inp.after(h2);
-        inp.addEventListener("input", ()=>{
-            h2.innerText = inp.value;
+        inp.addEventListener("input", (e)=>{
+            let data = e.data.charCodeAt(0);    // extact ascii value of given char
+
+            // we will only show those element which follow our rule 
+            if(('a'.charCodeAt(0) <= data && data <= 'z'.charCodeAt(0)) || 
+              ('A'.charCodeAt(0) <= data && data <= 'Z'.charCodeAt(0)) ) {
+                    h2.textContent += e.data;
+              }
+              else if(e.inputType === "insertText" && e.data === " " ){ // special condition for space
+                h2.textContent += " ";
+              }
         });
         
 
