@@ -120,3 +120,57 @@ pr.catch((error)=>{
     console.log("got reject message", error);
 })
  ```
+
+
+# What is Promise Chain
+
+When we want some data after getting (resolving) prevoius data, we use promise chainning.
+
+### Example :
+```
+const func1 = () =>{
+    return new Promise((res, rej) =>{
+
+        setTimeout(()=>{
+        res("data1 resolved");
+
+        }, 3000);
+    })
+    
+}
+const func2 = () =>{
+    return new Promise((res, rej) =>{
+
+        setTimeout(()=>{
+        res("data2 resolved");
+
+        }, 3000);
+    })
+    
+}
+
+let data1 = func1(); // this function will return Promise
+
+// handle promise
+data1.then((res)=>{
+    console.log(res);
+    // after getting data1 we want data2
+    func2().then((result)=>{
+        console.log(result);    // data2 resolved
+    })
+})
+```
+
+* NOTE : Calling `func2` inside `.then()` of *data1*.
+* If we want to call another function after getting *data2* we can call that function inside `.then()` of *data2* & so on.
+
+#### Simple way of using `Promise chaining`
+```
+func1().then((res)=>{
+    console.log(res);
+    return func2();
+}).then((res)=>{
+    console.log(res);
+})
+```
+* Note : Instead of writing `.then()` inside of another `.then()`, we're returning next function call & using `.then()` on it.
