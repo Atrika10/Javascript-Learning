@@ -82,3 +82,41 @@ let pr = new Promise((resolve, reject) =>{
 
 #### NOTE
 * Generally, we don't write `promise`, we request data from API, & it's return `promise`. Then we extract data from `promises` & work on them.
+
+
+## How to use promises ?
+* If we get a promise ; either it is fullfiled or it is rejected so We Have 2 function to handle this cases. 
+
+* When promise is `resolved` we use `.then()` function. This function has a parameter `result` which is a message passed by `resolve`.
+
+* When promise is `reject` we use `.catch()` function. This function has a parameter `error` which is a message passed by `reject`.
+
+ ### Example :  <p style = "color : deeppink; font-size : 15px"> Promise.then((res)=>{ .... }) </p>
+ ```
+ const getPromise = () =>{
+    return new Promise((res, rej)=>{
+       // do something
+        rej("promise is successfull");
+    })
+}
+
+let pr = getPromise();
+pr.then((result)=>{
+    console.log("get resolve message => ", result);
+})
+ ```
+
+### <p style = "color : deeppink; font-size : 15px"> Promise.catch((err)=>{ .... }) </p>
+ ```
+ const getPromise = () =>{
+    return new Promise((res, rej)=>{
+       // do something
+        rej("promise unsuccessfull");
+    })
+}
+
+let pr = getPromise();
+pr.catch((error)=>{
+    console.log("got reject message", error);
+})
+ ```
