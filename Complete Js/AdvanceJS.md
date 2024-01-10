@@ -174,3 +174,55 @@ func1().then((res)=>{
 })
 ```
 * Note : Instead of writing `.then()` inside of another `.then()`, we're returning next function call & using `.then()` on it.
+
+#
+# Async-Await
+
+* We use `async` keyword in a function to make that function *Asynchronous*.
+* *Async Function always returns a promise*.
+
+### Syntax
+```
+asyncs function myFunction() {
+    // do something
+}
+```
+### Await
+
+* `await` pauses the execution of its surrounding async function until the promise is settled.
+
+* <p style = "color : pink "> <i> await is only valid in async function </i> </p>
+
+* We can't use `await` any other place without `async` function.
+
+## Example of using async-await
+
+```
+function getData(dataId){
+    return new Promise ((res, rej) =>{
+        setTimeout(()=>{
+            console.log("data", dataId);
+            res("successfull");
+        },2000);
+    })
+   
+}
+async function myFunction (){
+    
+    await getData(1);   // 1st call
+    await getData(2);   // 2nd call
+    // ...... 
+}
+myFunction();
+```
+*   NOTE :  
+    * `getData()` function return a promise
+    * Make another function (`myFunction`) with `async` *keyword*. And use `await` inside `async` function.
+    * lastly call `async` function.
+    * `getData(2)` will call after completing first call. 
+    * `getData(1)` stops it's next instruction until its own work is complete.
+
+#### Problem :
+* we can't use `async-await` directly we have to make another function to use this. In previous example it is `myFunction`.
+
+* To Solve this problem we use `IIFE`.
