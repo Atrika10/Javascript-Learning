@@ -226,3 +226,36 @@ myFunction();
 * we can't use `async-await` directly we have to make another function to use this. In previous example it is `myFunction`.
 
 * To Solve this problem we use `IIFE`.
+
+## IIFE => Immediately Invoked Function Expression
+* `IIFE` is a function but doesn't have any name.
+
+* This function is called immediately at the time of defined. We don't have to call manually.
+
+* We can use IIFE only one time.
+
+### Syntax
+* 3 Way of difinig *IIFE*
+```
+// 1st way ( )(); in first parenthesis we've to define our normal function
+
+( function( a, b){
+    console.log(a+b);
+} )();
+
+// 2nd way Arrow Function
+
+( (a,b)=>{
+    console.log(5+6);
+} )();
+
+// 3rd way Async Function
+
+(async function(){
+    await getData(1); 
+    await getData(2); 
+})();
+
+```
+* NOTE :
+    * Here in 3rd way, we have not give any name of `async` function; we enclose entire `async function` inside a parenthesis ( ) & then one parenthesis. It is called automatically.
