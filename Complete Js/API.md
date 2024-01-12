@@ -67,3 +67,18 @@ const getFacts = async ()=>{
         ```
 
 * NOTE : parse means to convert one format to another format.
+
+#
+## <p style = "color : pink"> AJAX => Asynchronous Javascript and XML </p>
+Initially, when we call our API we used to get response in `XML` format ; & this process happen asynchrnously that is why it is called AJAX. Although now we got our data in `JSON` format.
+
+* AJAX is basically entire process through which we perform our API call and in response we got some data ; this entire process happen asynchronously.
+* When we send a call to API it's known as `AJAX calls` . Ajax calls allow a website to update part of its content upon a user action without the need to reload the page.
+
+*Note :*
+
+Read data from a web server - after a web page has loaded
+
+Update a web page without reloading the page
+
+Send data to a web server - in the background
