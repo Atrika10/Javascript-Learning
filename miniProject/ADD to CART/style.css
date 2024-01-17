@@ -1,0 +1,33 @@
+*{
+    background-color: rgb(166, 166, 255);
+}
+.main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+    margin: auto
+}
+ul{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+li {
+    list-style-type: none;
+    font-size: 1.8rem;
+}
+.cart{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+img{
+    width: 500px;
+}
+button{
+    margin: 2rem;
+    cursor: pointer;
+}
