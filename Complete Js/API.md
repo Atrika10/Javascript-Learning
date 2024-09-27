@@ -10,6 +10,7 @@
 * The `json()` method is used to extract the data from the response. This method returns a Promise that resolves to the JavaScript object parsed from the JSON.
 
 NOTE : ` JSON stands for JavaScript Object Notation`
+* `Json` : JSON is not a part of Javascript, it's just a format. JSON is kind of similar type of JS object both have key value pair but both are not same, they have some differences as well. Example : In JSON Key should be in string format but in JS object it is not. In JSON, there is nothing like `undefined` but in JS object we've a proper meaning of undefined.
 ## Example :
 
 ```
@@ -70,7 +71,7 @@ const getFacts = async ()=>{
 
 #
 ## <p style = "color : pink"> AJAX => Asynchronous Javascript and XML </p>
-Initially, when we call our API we used to get response in `XML` format ; & this process happen asynchrnously that is why it is called AJAX. Although now we got our data in `JSON` format.
+Initially, when we call our API we used to get response in `XML (Extensible Markup Language)` format ; & this process happen asynchrnously that is why it is called AJAX. Although now we got our data in `JSON` format.
 
 * AJAX is basically entire process through which we perform our API call and in response we got some data ; this entire process happen asynchronously.
 * When we send a call to API it's known as `AJAX calls` . Ajax calls allow a website to update part of its content upon a user action without the need to reload the page.
